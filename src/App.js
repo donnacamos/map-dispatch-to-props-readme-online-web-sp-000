@@ -21,9 +21,11 @@ class App extends Component {
   }
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = dispatch => {
   return {
-    items: state.items
+    addItem: () => {
+      dispatch(addItem())
+    }
   };
 };
 
